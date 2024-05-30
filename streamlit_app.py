@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.compose import ColumnTransformer
 
 class CustomLabelEncoder(BaseEstimator, TransformerMixin):
-    def init(self, columns):
+    def _init_(self, columns):
         self.columns = columns
         self.encoders = {}
 
@@ -25,7 +25,7 @@ class CustomLabelEncoder(BaseEstimator, TransformerMixin):
         return X
 
 class FeaturesAdder(BaseEstimator, TransformerMixin):
-    def init(self):
+    def _init_(self):
         pass
 
     def fit(self, X, y=None):
