@@ -1,5 +1,6 @@
 import streamlit as st
 
+def main():
 
     # Giving a title
     st.title('Bank Marketing Prediction Web App')
@@ -28,3 +29,16 @@ import streamlit as st
     cons_conf_idx = st.number_input('Consumer Confidence Index')
     euribor3m = st.number_input('Euribor 3 Month Rate')
     nr_employed = st.number_input('Number of Employees')
+    prediction = ''
+    
+    # Getting the input data from the user
+    if st.button('Bank Marketing Prediction'):
+        prediction = bank_marketing_prediction([age, job, marital, education, default, housing, loan,
+                                                contact, month, day_of_week, campaign, pdays, previous, 
+                                                poutcome, emp_var_rate, cons_price_idx, cons_conf_idx, 
+                                                euribor3m, nr_employed])
+        
+    st.success(prediction)
+    
+if __name__ == '__main__':
+    main()
