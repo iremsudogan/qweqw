@@ -1,7 +1,6 @@
 import streamlit as st
 
-def main():
-    
+
     # Giving a title
     st.title('Bank Marketing Prediction Web App')
     
@@ -29,6 +28,3 @@ def main():
     cons_conf_idx = st.number_input('Consumer Confidence Index')
     euribor3m = st.number_input('Euribor 3 Month Rate')
     nr_employed = st.number_input('Number of Employees')
-
-    # Code for prediction
-    prediction = ''
